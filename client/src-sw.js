@@ -22,7 +22,7 @@ const pageCache = new CacheFirst({
 warmStrategyCache({
   urls: ['/index.html', '/'],
   strategy: pageCache,
-});
+},pageCache);
 
 offlineFallback({
   pageFallback: '/index.html' // Make sure it uses the index.html when offline
